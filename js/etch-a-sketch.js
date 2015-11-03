@@ -1,3 +1,5 @@
+color = ["#FF0000", "#00FF00", "#0000FF"]
+
 $(document).ready( function() {
 	
 	for( i = 0; i < 16; i++ ) {
@@ -9,14 +11,15 @@ $(document).ready( function() {
 		
 	}	
 	
-	$('.cell').on('mouseenter', function() {
-		$(this).css('background-color', '#000');
+	$('#wrapper').on('mouseenter', '.cell', function() {
+		$(this).css('background-color', "#000");
 	});
 	$('button').on('click', function() {
 		$(".cell").remove();
 		$("br").remove();
 		$("#wrapper").append("<br>");
 		n = prompt("How big would you like your sketchpad?");
+		size = Math.floor((960 - 2 - (2 * n)) / n);
 		for( i = 0; i < n; i++ ) {
 		
 			for( j = 0; j < n; j++ ) {
@@ -24,7 +27,8 @@ $(document).ready( function() {
 			};
 			$("#wrapper").append("<br>");
 		
-		}	
+		};
+		$(".cell").css({"height": size, "width": size});
 	});
 	
 });

@@ -3,8 +3,8 @@ body {
 }
 
 #wrapper {
-	height: 800px;
-	width: 800px;
+	height: 1280px;
+	width: 1280px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -14,9 +14,9 @@ button {
 }
 
 div.cell {
-	height: 20px;
-	width: 20px;
+	height: 57px;
+	width: 57px;
 	display: inline-block;
 	background-color: #FFF;
-	margin: 5px;
+	margin: 2px;
 }
